@@ -51,7 +51,7 @@
       <h2 class="mt-3 text-3xl sm:text-4xl font-mono text-[#172126]">
         Todo lo que necesitas para decidir tu futuro
       </h2>
-      <p class="mt-4 text-muted-foreground">
+      <p class="mt-4 text-[#6A7981]">
         Herramientas diseñadas para ayudarte a explorar, comparar y elegir con
         confianza.
       </p>

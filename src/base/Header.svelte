@@ -2,8 +2,7 @@
   import Icon from "./../lib/Icons/Icon.svelte";
 
   const links = [
-    { label: "Inicio", href: "#inicio" },
-    { label: "Explorar", href: "#explorar" },
+    { label: "Explorar", href: "#/explorar" },
     { label: "Carreras", href: "#carreras" },
     { label: "Recursos", href: "#recursos" },
     { label: "Contacto", href: "#contacto" },
@@ -17,7 +16,7 @@
 >
   <div class="container mx-auto flex items-center justify-between h-16 px-4">
     <a
-      href="#inicio"
+      href="/"
       class="flex items-center gap-2 text-primary-500 font-bold text-xl"
     >
       <Icon name="GraduationCap" class="size-6" />

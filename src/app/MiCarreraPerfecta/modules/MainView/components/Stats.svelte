@@ -1,10 +1,14 @@
 <script lang="ts">
-  const stats = [
-    { value: "250+", label: "Universidades" },
-    { value: "1,800+", label: "Carreras listadas" },
-    { value: "50K+", label: "Estudiantes orientados" },
-    { value: "100%", label: "Gratuito" },
-  ];
+  import { onMount } from "svelte";
+  //@ts-ignore
+  import { getStats } from "../helpers/helpers.svelte";
+
+  let stats: { value: string; label: string }[] = [];
+
+  onMount(async () => {
+    let data = await getStats();
+    stats = data;
+  });
 </script>
 
 <section id="stats" class="py-20 bg-primary-500">

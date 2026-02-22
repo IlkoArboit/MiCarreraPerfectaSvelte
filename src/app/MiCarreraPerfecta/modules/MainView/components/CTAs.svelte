@@ -16,7 +16,7 @@
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-4">
         <a
-          href="#explorar"
+          href="http://localhost:5678/form/TestForm"
           class="inline-flex items-center gap-2 rounded-lg bg-tertiary-500 px-8 py-3.5 text-sm font-bold text-tertiary-contrast-500 hover:opacity-90 transition-opacity"
         >
           Comenzar ahora <Icon name="ArrowLeft" class="size-4 rotate-180" />

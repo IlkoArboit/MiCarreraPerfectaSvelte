@@ -29,7 +29,7 @@
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       {#each branches as branch}
         <a
-        href="#/carreras/branch/{branch.id}"
+        href="#/carreras"
           class="group flex flex-col items-center gap-3 rounded-xl border border-[#E5E2DC] bg-surface-500 p-6 text-center hover:border-primary-500/40 hover:shadow-md transition-all cursor-pointer"
         >
           <div

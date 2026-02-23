@@ -22,9 +22,9 @@
       <Icon name="Clock" class="size-3" />
       {career.duration_months} meses
     </span>
-    <!-- <span class="flex items-center gap-1">
+    <span class="flex items-center gap-1 capitalize">
       <Icon name="BookOpen" class="size-3" />
-      {career.}
-    </span> -->
+      {career.modality}
+    </span>
   </div>
 </a>

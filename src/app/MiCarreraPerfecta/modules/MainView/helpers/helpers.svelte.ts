@@ -1,14 +1,15 @@
-export async function getIntelligences() {
+export async function getBranches() {
   return new Promise<any>(async (resolve) => {
-    await fetch("http://localhost:8080/intelligence/gerAll")
+    await fetch("http://localhost:8080/branch/getAll")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok " + response.statusText);
         }
         return response;
       })
-      .then((data) => {
-        resolve(data.json());
+      .then(async (data) => {
+        let branches = await data.json()
+        resolve(branches);
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);

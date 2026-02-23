@@ -26,4 +26,7 @@ export interface Career {
   description: string;
   duration_months: number;
   branch: string;
+  branch_id: number;
+  typecareer: string;
+  modality: string;
 }

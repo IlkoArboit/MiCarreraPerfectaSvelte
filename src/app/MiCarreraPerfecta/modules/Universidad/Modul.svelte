@@ -15,6 +15,7 @@
   async function cargarUniversidad(id: string) {
     if (!id) return;
 
+    //@ts-ignore
     uni = await getUniversityById(id);
   }
 

@@ -1,16 +1,12 @@
 <script lang="ts">
-	import Icon from './../../../../../lib/Icons/Icon.svelte';
+  import { onMount } from "svelte";
+  import Icon from "./../../../../../lib/Icons/Icon.svelte";
+  import { getBranches } from "../helpers/helpers.svelte";
+  //@ts-ignore
+  import { branchesSchema } from "../schemas/general.svelte";
 
-  const branches = [
-  { icon: "Stethoscope", name: "Ciencias de la Salud", count: 120 },
-  { icon: "Code", name: "Tecnología e Ingeniería", count: 230 },
-  { icon: "Scale", name: "Derecho y Ciencias Sociales", count: 95 },
-  { icon: "Palette", name: "Arte y Diseño", count: 80 },
-  { icon: "FlaskConical", name: "Ciencias Exactas", count: 110 },
-  { icon: "Building2", name: "Negocios y Administración", count: 180 },
-  { icon: "Leaf", name: "Medio Ambiente", count: 65 },
-  { icon: "Calculator", name: "Economía y Finanzas", count: 90 },
-] as const;
+  onMount(async () => {});
+  let branches = branchesSchema;
 </script>
 
 <section id="carreras" class="py-24">
@@ -32,21 +28,22 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       {#each branches as branch}
-        <div
+        <a
+        href="#/carreras/branch/{branch.id}"
           class="group flex flex-col items-center gap-3 rounded-xl border border-[#E5E2DC] bg-surface-500 p-6 text-center hover:border-primary-500/40 hover:shadow-md transition-all cursor-pointer"
         >
           <div
             class="flex size-14 items-center justify-center rounded-full bg-tertiary-500/15 text-tertiary-500 group-hover:bg-tertiary-500 group-hover:text-tertiary-contrast-500 transition-colors"
           >
             <Icon name={branch.icon} class="size-7" />
-        </div>
-        <h3 class="text-sm font-semibold text-[#172126]">
+          </div>
+          <h3 class="text-sm font-semibold text-[#172126]">
             {branch.name}
-        </h3>
-        <span class="text-xs text-[#6A7981]">
+          </h3>
+          <!-- <span class="text-xs text-[#6A7981]">
             {branch.count} carreras
-        </span>
-        </div>
+          </span> -->
+        </a>
       {/each}
     </div>
   </div>
